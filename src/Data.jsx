@@ -1,15 +1,15 @@
 import React  from 'react'
+import List from './List'
 
 class Data extends React.Component {
   render() {
     return (
       this.props.data.map((item, index) => 
       <div className='Items' key={index}>
-        <h3>Title: {item.Category}</h3>
-        <p>Description: {item.Description}</p>
-        </div>)   
+        <List Category={item.Category} Description={item.Description}/>
+      </div>)   
     )
   }
 }
 
-export default Data
+export default Data;
